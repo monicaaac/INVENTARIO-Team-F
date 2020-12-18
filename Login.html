@@ -1,27 +1,41 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="es">
 <head>
-<title>Login</title><div class="wrapper">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventario ¦ Log In</title>
+    
+    <link rel="stylesheet"  href="css/loginstyle.css"/>
+    
 </head>
-
 <body>
-  <link rel="stylesheet" href="Estilo.scss">
-    <form class="login">
-      <p class="title">Log in</p>
-      <input type="text" placeholder="Username" autofocus/>
-      <i class="fa fa-user"></i>
-      <input type="password" placeholder="Password" />
-      <i class="fa fa-key"></i>
-      <a href="#">Forgot your password?</a>
-      <button>
-        <i class="spinner"></i>
-        <span class="state">Log in</span>
-      </button>
-    </form>
- 
-    </p>
-  </div>
-</body> 
-  
+    
+    <div class="login">
+        <div class="login-triangle"></div>
+        
+        <h2 class="login-header">Log in</h2>
+        <div class="login-container">
+    
+       <form action="" method="post">
+        <p><input required type="" name="username" id="username"placeholder="Nombre Usuario"></p>
+   
+        <br><br>
+    
+        
+        <p><input required type="password" name="password" id="password"placeholder="Contraseña"></p>
+   
+         <br><br>
+
+        <a href="recuperar_contraseña.html">Olvido su Contraseña?</a>
+         <br><br>
+       <!-- <input type="submit" value="Ingresar">-->
+
+        <button onclick="validate()"type="button" id="ingresar">Ingresar</button>
+        </form>
+    </div>
+    
+    <script src="js/login.js"></script>
+      
+      
+</body>
 </html>
