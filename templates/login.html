@@ -1,0 +1,46 @@
+ <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventario ¦ Log In</title>
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    
+</head>
+<body>
+    
+    <div class="style">
+                
+        <h2 class="style-header">Log in</h2>
+        <div class="style-container">
+    
+        <form action="/validar" method="post">
+
+        <p><input required type="" name="username" id="username"placeholder="Nombre Usuario"></p>
+        <br><br>
+    
+        
+        <p><input required type="password" name="password" id="password"placeholder="Contraseña"></p>
+        <br><br>
+
+        <a href="recuperar_contraseña.html">Olvido su Contraseña?</a>
+         <br><br>
+
+
+         <p><input type="submit" name="action" value="Ingresar" id="Button1"></p>
+        </form>
+        
+        </form>
+        <form action="/buscarproducto" method="post">
+
+            <p><input required type="submit" name="username" id="Button1" placeholder="Nombre Usuario" value="Pasar a ver el inventario"></p>
+            
+        </form>
+    </div>
+    
+    <script src="../static/js/login.js"></script>
+      
+      
+</body>
+</html> 
