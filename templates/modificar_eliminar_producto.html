@@ -1,0 +1,38 @@
+<!doctype html>
+<!-- Formulario de creacion de producto que entrega los datos solicitando el vinculo "/crearproducto"
+    nombres de las variables para recibir en python del formulario:
+    Imagen = "archivo"
+    Codigo del producto = "codigo"
+    Nombre del producto = "nombre"
+    Precio del producto = "precio"
+    Unidades disponibles en el momento de la creacion del producto: cantidad
+-->
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Modificar o Eliminar Producto</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    </head>
+    <body>
+        <div id="wb_Text2" style="position:absolute;left:380px;top:20px;width:576px;height:54px;text-align:center;z-index:6;">
+            <span style="color:#000000;font-family:Arial;font-size:24px;line-height:39px;">
+                <strong>
+                    Modificar o eliminar producto
+                </strong>
+            </span>
+        </div>
+        <div id="fv_recover" style="position:absolute;left:400px;top:100px;width:153px;height:25px;z-index:8;">
+            <form action="/modificar" method="POST" accept="image/*" enctype="multipart/form-data" >
+                <p>Suba la imagen del Producto<input type="file" name="archivo"></p>
+                <p>Codigo de Producto:<input type="text" name="codigo" value=""></p>
+                <p>Nombre del Producto:<input type="text" name="nombre" value=""></p>
+                <p>Precio:<input type="text" name="precio" value=""></p>
+                <p>Cantidad:<input type="text" name="cantidad" value=""></p>
+                <p><input type="submit" name="action" value="Modificar" id="Button1"><input type="submit" name="action" value="Eliminar" id="Button1"></p>
+            </form>
+            
+            
+        </div>
+    </body>
+</html>
