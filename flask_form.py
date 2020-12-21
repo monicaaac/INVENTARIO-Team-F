@@ -35,5 +35,7 @@ def show_modificar_form():
         return '<h1>Producto Eliminado</h1>'
 
 
+
+
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
