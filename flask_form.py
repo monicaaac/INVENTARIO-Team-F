@@ -3,6 +3,7 @@ import DB_Object
 
 app = Flask(__name__)
 
+
 tipo_usuario = ''
 
 @app.route("/")
@@ -33,6 +34,10 @@ def validar_usua():
             return render_template("home1.html")
     elif validacion[0] is False:
         return render_template("login.html")
+
+@app.route("/recuperar_psswd")
+def recuperar_psswd():
+    return render_template("recuperar_psswd.html")
 
 
 @app.route("/crearproducto/")
@@ -106,4 +111,4 @@ def signout():
     return render_template('login.html')
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
