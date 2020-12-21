@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <title>Inventario ¦ Home</title>
-    <!-- BOOTSTRAP 4 CDN -->
+  
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     
   </head>
@@ -18,22 +18,25 @@
         <ul class="navbar-nav">
 
             <li class="nav-item active">
-                <a class="nav-link" href="{{ url_for('templates', file='html/crear_usuario.html) }}">Crear usuario</a>
-              </li><li class="nav-item active">
+                <a class="nav-link" href="crear_usuario.html">Crear usuario</a>
+              </li>
 
             <li class="nav-item active">
-                    <a class="nav-link" href="{{ url_for('templates', file='html/buscar_producto.html) }}">Buscar Producto</a>
+                    <a class="nav-link" href="buscar_producto.html">Buscar Producto</a>
             </li>
 
           <li class="nav-item active">
-            <a class="nav-link" href="{{ url_for('templates', file='html/crear_producto.html) }}">Crear Producto</a>
+            <a class="nav-link" href="crear_producto.html">Crear Producto</a>
           </li>
-          
-            <a class="nav-link" href="{{ url_for('templates', file='html/modificar_inventario.html) }}">Modificar Inventario</a>
+
+          <li class="nav-item active">
+            <a class="nav-link" href="modificar_inventario.html">Modificar Inventario</a>
           </li>
+
           <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('templates', file='html/login.html') }}">Sign out</a>
+            <a class="nav-link" href="login.html">Sign out</a>
           </li>
+
         </ul>
       </div>
     </nav>
