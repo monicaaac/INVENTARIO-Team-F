@@ -95,7 +95,7 @@ def sql_crear_usuario(usuario, clave, tipo):
     cursorObj.execute('SELECT * FROM usuarios')
     id = len(cursorObj.fetchall()) + 1
     print('el id es: ', id)
-    cursorObj.execute("INSERT INTO usuarios VALUES(?, ?, ?, ?)", (id, usuario, clave, tipo))
+    cursorObj.execute("INSERT INTO usuarios (id, usuario, clave, tipo) VALUES(?, ?, ?, ?)", (id, usuario, clave, tipo))
     con.commit()
 
 
@@ -146,6 +146,18 @@ def sql_validacion_credenciales(username, password):
         return False, ''
 
 
+def sql_borrarproducto(id):
+    global con
+
+    cursorObj = con.cursor()
+    id = int(id)
+
+    codigo = []
+    codigo.append(id)
+    codigo = tuple(codigo)
+
+    cursorObj.execute('DELETE FROM productos WHERE id = ?', codigo)
+    con.commit()
 
 
 
