@@ -5,10 +5,15 @@
     <title>Inventario ¦ Home</title>
     <!-- BOOTSTRAP 4 CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    
+    <style>
+      body  {
+      background-image: url({{ url_for('static', filename='fondo rojo.jpg') }})
+    }
+    </style>
   </head>
   <body>
-
+    <font face="Comic Sans MS" size="50" style="position:absolute;left:15px;top:300px;">  Accesorios</font>
+    <font face="Arial" size="20" style="position:absolute;left:15px;top:370px;"> Sistema de inventario</font>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <a class="navbar-brand" href="{{ url_for('validar_usua') }}">Home</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -20,14 +25,14 @@
             <li class="nav-item active">
 
             <li class="nav-item active">
-                <a class="nav-link" href="{{ url_for('buscarproducto') }}">Buscar Producto</a>
+                <a class="nav-link" href="{{ url_for('show_productos') }}">Productos</a>
             </li>
 
           
-            <a class="nav-link" href="{{ url_for('show_modificar_form') }}">Modificar Inventario</a>
+            <a class="nav-link" href="{{ url_for('show_modificarinventario') }}">Modificar Inventario</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('validar_usua') }}">Sign out</a>
+            <a class="nav-link" href="{{ url_for('signout') }}">Sign out</a>
           </li>
         </ul>
       </div>

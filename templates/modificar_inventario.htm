@@ -1,80 +1,32 @@
-<!DOCTYPE html>
-<!-- Código  CSS -->
+<!doctype html>
+
 <html>
-<head>
-<title>Inventario ¦ Modificar Inventario</title>
-
-<style >
-
-div.a {
-	text-align: center; font-family: Helvetica,  sans-serif }  
-
-div.b {
-    text-align: left; font-family: Helvetica,  sans-serif }  
-
-body {
-  padding-left: 11em;
-  font-family: Georgia, "Times New Roman",
-        Times, serif;
-  color: purple;
-  background-color: #f8f8f7 }
-ul.navbar {
-  position: absolute;
-  top: 2em;
-  left: 1em;
-  width: 9em }
-h1 {
-    text-align: center;
-    font-family: Helvetica, Geneva, Arial,
-        SunSans-Regular, sans-serif }
-   
-</style>
-<div div class="b"></div>
-    <header >
-        <a  href="#" id="btn-mobile"><i ></i></a>
-        <a  href="#">Cerrar Sesion</a>
-        <a  href="index.html"><i ></i> </a>
-    </header>
-</div> 
-</head>
-
-
-<!-- Contenido de la página web -->
-<body>
-<!-- Cabecera de la página web -->
-<div div class="b"></div>
-    <header >
-        <a  href="#" id="btn-mobile"><i ></i></a>
-        <a  href="#">inicio</a>
-        <a  href="index.html"><i ></i> </a>
-        
-    </header>
-</div> 
-<div>
-<h1>Sistema de inventario para tienda de accesorios  </h1>
-<h2></h2>
-</div>
-<div>
-    <img src="img/mision tic.jpg" alt="misiontic" style="margin:auto; width:200px;display:block" />
-</div>
-<!-- Fin de la cabecera de la página web -->
-<br />
-<!-- Contenedor para la parte central -->
-<div div class="a">
-    
-    <div class="columns">
-        <div class="column">
-            <h2 >Bienvenido Vendedor</h2>
-            <form action="#" class="a">
-                
-                <button class="btn btn-default btn-primary">Consultar Producto</button><br> </br>
-                <button class="btn btn-default btn-primary">Modificar Inventario</button><br> </br>
-            </form>
+    <head>
+        <meta charset="utf-8">
+        <title>Modificar o Eliminar Producto</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+        <style>
+      body  {
+      background-image: url({{ url_for('static', filename='fondo rojo.jpg') }})
+    }
+    </style>
+    </head>
+    <body>
+        <div id="wb_Text2" style="position:absolute;left:380px;top:20px;width:576px;height:54px;text-align:center;z-index:6;">
+            <span style="color:#000000;font-family:Arial;font-size:24px;line-height:39px;">
+                <strong>
+                    Modificar Inventario
+                </strong>
+            </span>
         </div>
-    
-        
-       
-    </div>
-</div>  
+        <div id="fv_recover" style="position:absolute;left:400px;top:100px;width:153px;height:25px;z-index:8;">
+            <form action="/modificarinventario/mod/" method="POST" enctype="multipart/form-data" >
+                <p>Codigo de Producto:<input type="text" name="codigo" value=""></p>
+                <p>Cantidad:<input type="text" name="cantidad" value=""></p>
+                <p><input type="submit" name="action" value="Modificar" id="Button1"></p>
+            </form>
 
+
+        </div>
+    </body>
 </html>

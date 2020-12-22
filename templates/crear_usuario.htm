@@ -27,12 +27,18 @@ h1 {
     text-align: center;
     font-family: Helvetica, Geneva, Arial,
         SunSans-Regular, sans-serif }
+
+
+      body  {
+      background-image: url({{ url_for('static', filename='fondo rojo.jpg') }})
+    }
+
    
 </style>
 <div div class="b"></div>
     <header >
         <a  href="#" id="btn-mobile"><i ></i></a>
-        <a  href="#">Cerrar Sesion</a>
+        <a  href="{{ url_for('signout') }}">Cerrar Sesion</a>
         <a  href="index.html"><i ></i> </a>
     </header>
 </div> 
@@ -44,7 +50,7 @@ h1 {
 <!-- Cabecera de la página web -->
 <div div class="b"></div>
     <header >
-        <a  href="#" id="btn-mobile"><i ></i></a>
+        <a  href="{{ url_for('show_login_form') }}"><i ></i></a>
         <a  href="#">inicio</a>
         <a  href="index.html"><i ></i> </a>
         
@@ -65,11 +71,19 @@ h1 {
     <div class="columns">
         <div class="column">
             <h2 >Registro Nuevo Usuario</h2>
-            <form action="#" class="a">
-                <input type="email" placeholder="Nombre de usuario" class="a"> <br> </br>
-                <input type="password" placeholder="password" class="a"> <br> </br>
-                <input type="password" placeholder="Confirma tu password" class="a"><br> </br>
-                <button class="btn btn-default btn-primary">Crear Usuario</button><br> </br>
+            <form action="/crearusuario/crear/" class="a" method="POST">
+                <input type="email" placeholder="Nombre de usuario" class="a" name="username" value=""><br>
+                <input type="password" placeholder="password" class="a" name="password" value=""><br>
+                <p>
+
+                Tipo de usuario:<br>
+
+                <input type="radio" name="tipo" value="admin"> Administrador
+
+                <input type="radio" name="tipo" value="vend"> Vendedor
+
+              </p>
+                <p><input class="btn btn-default btn-primary" type="submit" value="Crear Usuario" id="Button1"></p>
             </form>
         </div>
     

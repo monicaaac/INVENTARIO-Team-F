@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Buscar producto</title>
+    <style>
+    table, th, td {
+      border: 1px;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 15px;
+    }
+    </style>
+</head>
+<body>
+
+    <h1>Productos</h1>
+    <table class="default">
+
+      <tr>
+
+              {% for row in rows %}
+              <td>
+
+                  <img src="{{ url_for('static', filename=row[4]) }}" width="200" height="200">
+                  <h3>{{row[1]}}</h3>
+                  <h3>Precio: {{row[2]}}</h3>
+                  <h3>Cantidad: {{row[3]}}</h3>
+                  <h3>id: {{row[0]}}</h3>
+              </td>
+              {% endfor %}
+
+
+      </tr>
+
+
+
+    </table>
+
+</body>
+</html>
